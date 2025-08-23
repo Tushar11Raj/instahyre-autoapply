@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Instahyre Auto Apply</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Instahyre Auto Apply <span class="badge">LIVE</span></h1>
+      <!-- Dark/Light mode switch -->
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch" />
+          <span class="slider"></span>
+        </label>
+        <span id="themeLabel">Light</span>
+      </div>
+    </header>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="startBtn" class="btn">Start</button>
+      <button id="resetBtn" class="btn danger">Reset</button>
+    </div>
+
+    <!-- Applications count -->
+    <div class="stats">
+      <p>Applications Done: <span id="applicationsDone">0</span></p>
+    </div>
+
+    <!-- Skills table -->
+    <h2>Skills Frequency</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Skill</th>
+          <th>Count</th>
+        </tr>
+      </thead>
+      <tbody id="skillsTableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Only external JS -->
+  <script src="popup.js"></script>
+</body>
+</html>

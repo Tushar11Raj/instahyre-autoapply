@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Instahyre Auto Apply",
+  "version": "1.0",
+  "description": "Automatically applies to jobs, tracks skills and counts frequency in Instahyre",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.instahyre.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
